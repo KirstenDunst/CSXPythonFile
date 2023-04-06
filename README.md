@@ -1,2 +1,9 @@
+<!--
+ * @Author: Cao Shixin
+ * @Date: 2022-10-26 14:25:45
+ * @LastEditors: Cao Shixin
+ * @LastEditTime: 2022-10-26 14:49:16
+ * @Description: 
+-->
 # CSXPythonFile
-《python编程 从入门到实践》中的使用附带文件
+python的功能性学习过程demo留存
