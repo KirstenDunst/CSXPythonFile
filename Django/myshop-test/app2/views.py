@@ -2,12 +2,14 @@
 Author: Cao Shixin
 Date: 2023-04-06 09:33:43
 LastEditors: Cao Shixin
-LastEditTime: 2023-04-11 14:33:04
+LastEditTime: 2023-04-14 15:21:12
 Description: 
 '''
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import HttpRequest
+
+from app2.models import UserBaseInfo
 
 # Create your views here.
 def hello(request):
@@ -96,3 +98,14 @@ def test_response(request):
     response.write('<br>')
     
     return response
+
+def test_render(response):
+    return render(response,'2/test_render.html',{'info':'hello django'},content_type='text/html')
+
+
+def test_redirect_model(request,id):
+    user = UserBaseInfo.objects.get(id=id)
+    return render(user)
+def userinfo(request, id):
+    user = UserBaseInfo.objects.get(id=id)
+    return HttpResponse("编号:"+str(user.id)+"姓名:"+user.name)

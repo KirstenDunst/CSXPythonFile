@@ -2,7 +2,7 @@
 Author: Cao Shixin
 Date: 2023-04-06 09:34:01
 LastEditors: Cao Shixin
-LastEditTime: 2023-04-10 11:30:43
+LastEditTime: 2023-04-14 16:11:09
 Description: 
 '''
 from django.urls import path, re_path
@@ -29,4 +29,8 @@ urlpatterns = [
     
     path('app2/test_post/',view=views.test_post,name='app2_test_post'),
     path('app2/test_response/',view=views.test_response,name='app2_test_response'),
+    
+    path('app2/test_render/',view=views.test_render,name='app2_test_render'),
+    path('app2/test_redirect_model/<int:id>/',view=views.test_redirect_model,name='app2_test_redirect_model'),
+    path('app2/userinfo/<int:id>',view=views.userinfo,name='app2_userinfo'),
 ]
